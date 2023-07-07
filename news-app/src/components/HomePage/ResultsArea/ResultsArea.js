@@ -16,7 +16,12 @@ export default function ResultsArea(props) {
 						description={article.description}
 						url={article.source.url}
 						source={article.source.name}
-						date={article.publishedAt}
+						date={new Date(article.publishedAt).toLocaleDateString('en-GB', {
+							weekday: 'long',
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric',
+						})}
 					/>
 				</div>
 			))}
