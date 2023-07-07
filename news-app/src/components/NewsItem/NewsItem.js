@@ -12,8 +12,6 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Link from '@mui/material/Link';
@@ -37,7 +35,7 @@ export default function NewsItem(props) {
 	};
 
 	return (
-		<Card sx={{ maxWidth: 400 }}>
+		<Card sx={{ maxWidth: 350 }}>
 			<CardHeader
 				action={
 					<IconButton aria-label='settings'>
@@ -45,7 +43,7 @@ export default function NewsItem(props) {
 					</IconButton>
 				}
 				title={
-					<Typography variant='h6' fontSize={window.innerWidth > 480 ? 20 : 16}>
+					<Typography variant='h6' fontSize={16}>
 						{expanded
 							? props.title
 							: props.title.length > 60
@@ -54,7 +52,7 @@ export default function NewsItem(props) {
 					</Typography>
 				}
 				subheader={
-					<Typography variant='h6' fontSize={window.innerWidth > 480 ? 18 : 14}>
+					<Typography variant='h6' fontSize={14}>
 						{props.date}
 					</Typography>
 				}
@@ -65,27 +63,35 @@ export default function NewsItem(props) {
 				image={props.image}
 				alt='news item'
 			/>
-			<CardContent></CardContent>
-			<CardActions disableSpacing>
-				<IconButton aria-label='add to favorites'>
-					<FavoriteIcon />
-				</IconButton>
-				<IconButton aria-label='share'>
-					<ShareIcon />
-				</IconButton>
-				<ExpandMore
-					expand={expanded}
-					onClick={handleExpandClick}
-					aria-expanded={expanded}
-					aria-label='show more'>
-					<ExpandMoreIcon />
-				</ExpandMore>
+
+			<CardActions>
+				<div
+					className='expand'
+					style={{
+						display: 'flex',
+						justifyContent: 'flex-start',
+						alignItems: 'center',
+					}}>
+					{' '}
+					<Typography fontSize={15}>
+						{!expanded ? 'Show details' : 'Hide'}
+					</Typography>
+					<ExpandMore
+						expand={expanded}
+						onClick={handleExpandClick}
+						aria-expanded={expanded}
+						aria-label='show more'>
+						<ExpandMoreIcon />
+					</ExpandMore>
+				</div>
 			</CardActions>
 			<Collapse in={expanded} timeout='auto' unmountOnExit>
 				<CardContent>
-					<Typography>{props.description}</Typography>
-					<Typography>News Source:</Typography>
-					<Link href={props.url}> {props.source}</Link>
+					<Typography fontSize={15}>{props.description}</Typography>
+					<Typography fontSize={15}>News Source:</Typography>
+					<Link target='_blank' href={props.url} rel='noreferrer' fontSize={15}>
+						{props.source}
+					</Link>
 				</CardContent>
 			</Collapse>
 		</Card>
