@@ -1,9 +1,10 @@
 import SearchBar from './SearchBar/SearchBar';
 import ResultsArea from './ResultsArea/ResultsArea';
-import { useState, useEffect } from 'react';
-// const API_KEY = process.env.API_KEY;
+import { useState } from 'react';
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 export default function HomePage() {
-	const url = `https://gnews.io/api/v4/search?q=football&lang=en&country=uk&max=100&apikey=14d5af9afc1b2b7d20e2f08373271d53`;
+	const url = `https://gnews.io/api/v4/search?q=football&lang=en&country=uk&max=100&apikey=${API_KEY}`;
 
 	const [search, setSearch] = useState('');
 
@@ -20,6 +21,7 @@ export default function HomePage() {
 	return (
 		<>
 			<SearchBar
+				search={search}
 				handleInputChange={handleInputChange}
 				handleSearchClick={handleSearchClick}
 			/>

@@ -7,6 +7,7 @@ export default function SearchBar(props) {
 	return (
 		<div className='search-bar'>
 			<input
+				value={props.search}
 				type='text'
 				id='search-input'
 				placeholder='Search for news'
