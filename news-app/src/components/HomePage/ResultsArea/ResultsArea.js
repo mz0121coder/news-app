@@ -12,6 +12,7 @@ export default function ResultsArea(props) {
 			{props.articles.map(article => (
 				<div key={article.id} className='news-item-container'>
 					<NewsItem
+						id='news-item'
 						title={article.title}
 						image={article.image}
 						description={article.description}
