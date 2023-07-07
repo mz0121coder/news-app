@@ -1,4 +1,4 @@
-### News App - Plan
+# News App - Plan
 
 ## Stage 1 - project setup
 
@@ -11,8 +11,14 @@
 - Set up Route to ArticlePage✅
 - install dotenv and create .env file ✅
 - create account for news API and add API key to .env file, use the key in the HomePage component ✅
-- auto deploy on Netlify
+- auto deploy on Netlify ✅
+- netlify toml file to prevent refresh issues ✅
+- add env and set CI to false on netlify for smooth deployment ✅
 
 ## Stage 2 - rendering events
 
-- Create a reusable template for NewsItem component (JSX and CSS styling), this will be rendered for each article (in progress)
+- Create a reusable template for NewsItem component ✅
+- Create state for search that updates as user types ✅
+- Create state for articles that updates on each fetch request, based on the most recent search ✅
+- Pass the articles down to ResultsArea component ✅
+- Pass props (title, image, description, url, source, date) from HomePage to ResultsArea, then use this data to render the child component (NewsItem) for each article ✅
