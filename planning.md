@@ -31,3 +31,8 @@
 - Show articles as grid with 2 on each row for tablets (600 to 900px) ✅
 - Show as 3 on each row for other devices ✅
 - Use Material UI card components to style the articles ✅
+
+## Stage 4 - refactoring and testing
+
+- Look at code suggestions (use ChatGPT and/or Codium AI) to assess performance, readability and security of code. ✅
+- Write a test suite for HomePage component. ✅
