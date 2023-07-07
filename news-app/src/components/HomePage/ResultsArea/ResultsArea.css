@@ -1,0 +1,20 @@
+.result-area {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+	.result-area {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2vw;
+	}
+}
+
+@media (min-width: 901px) {
+	.result-area {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2vw;
+	}
+}

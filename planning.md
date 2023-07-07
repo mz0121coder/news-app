@@ -22,3 +22,4 @@
 - Create state for articles that updates on each fetch request, based on the most recent search ✅
 - Pass the articles down to ResultsArea component ✅
 - Pass props (title, image, description, url, source, date) from HomePage to ResultsArea, then use this data to render the child component (NewsItem) for each article ✅
+- Show dates in this format: '11th July, 2023' ✅
