@@ -9,6 +9,9 @@
 - Install react router dom ✅
 - Set up Route to HomePage ✅
 - Set up Route to ArticlePage✅
+- install dotenv and create .env file ✅
+- create account for news API and add API key to .env file, use the key in the HomePage component ✅
+- auto deploy on Netlify
 
 ## Stage 2 - rendering events
 
