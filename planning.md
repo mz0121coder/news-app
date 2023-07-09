@@ -39,10 +39,17 @@
 - Look at code suggestions (use ChatGPT and/or Codium AI) to assess performance, readability and security of code. ✅
 - Write tests for HomePage component. ✅
 - Write tests for ResultsArea component. ✅
-- Save articles to an array, keep them in local storage ✅
+- Save articles to an array (savedNewsItems), keep them in local storage ✅
 - Include a function to check no duplicate news items are added ✅
 - Show a 'Snackbar' in the corner to indicate when a news item has been added, or if it already exists ✅
 - View saved articles on the ArticlePage
 - Create a MenuBar component that is used to direct the user to the HomePage and/or SavedArticles page ✅
 - Only show the SearchBar component when the user is on the home page (not when checking saved articles or visiting about page)✅
 - Create a route to an About page ✅
+
+## Stage 5 - show saved articles + finishing touches
+
+- On SavedArticles page, use the useEffect hook, to get saved news items from local storage, using the same key ('savedNewsItems') ✅
+- Use an empty array as the dependency because this only needs to be done the first time the component mounts. ✅
+- Render a NewsItem components for each of the saved items.
+- Do this by importing the previously created ResultsArea component, passing down the 'savedNewsItems' array for the 'articles' prop
