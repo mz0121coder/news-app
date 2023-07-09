@@ -1,16 +1,11 @@
 import MenuBar from '../MenuBar/MenuBar';
+import './SavedArticles.css';
 
 export default function SavedArticles() {
 	return (
-		<div
-			className='saved-articles-heading'
-			style={{
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-			}}>
+		<div className='saved-heading-container'>
 			<MenuBar />
-			<h1>News article page</h1>
+			<h1>Saved Articles</h1>
 		</div>
 	);
 }

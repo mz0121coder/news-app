@@ -1,0 +1,11 @@
+.saved-heading-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@media (min-width: 480px) {
+	.saved-heading-container {
+		justify-content: center;
+	}
+}

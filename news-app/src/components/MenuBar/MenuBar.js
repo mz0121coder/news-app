@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './MenuBar.css';
 import Button from '@mui/material/Button';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Grow from '@mui/material/Grow';
@@ -48,7 +49,7 @@ export default function MenuBar() {
 					aria-expanded={open ? 'true' : undefined}
 					aria-haspopup='true'
 					onClick={handleToggle}>
-					<MoreVertIcon />
+					<MoreVertIcon className='menu-icon' />
 					{/* <MenuOutlinedIcon style={{ color: 'black' }} /> */}
 				</Button>
 				<Popper
@@ -72,17 +73,15 @@ export default function MenuBar() {
 										id='composition-menu'
 										aria-labelledby='composition-button'
 										onKeyDown={handleListKeyDown}>
-										<Link
-											to='/'
-											style={{ textDecoration: 'none', color: 'black' }}>
+										<Link className='page-link' to='/'>
 											<MenuItem onClick={handleClose}>Home</MenuItem>
 										</Link>
-										<Link
-											to='/savedarticles'
-											style={{ textDecoration: 'none', color: 'black' }}>
+										<Link className='page-link' to='/savedarticles'>
 											<MenuItem onClick={handleClose}>Saved Articles</MenuItem>
 										</Link>
-										<MenuItem onClick={handleClose}>About</MenuItem>
+										<Link to='/about' className='page-link'>
+											<MenuItem onClick={handleClose}>About</MenuItem>
+										</Link>
 									</MenuList>
 								</ClickAwayListener>
 							</Paper>

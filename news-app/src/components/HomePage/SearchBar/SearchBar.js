@@ -12,6 +12,7 @@ export default function SearchBar(props) {
 	// Render the search bar
 	return (
 		<div className='search-bar'>
+			<MenuBar />
 			<TextField
 				id='outlined-basic'
 				placeholder='Search for news'
@@ -23,7 +24,6 @@ export default function SearchBar(props) {
 			<Button variant='contained' onClick={props.handleSearchClick}>
 				Submit
 			</Button>
-			<MenuBar />
 		</div>
 	);
 }
