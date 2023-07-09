@@ -51,5 +51,5 @@
 
 - On SavedArticles page, use the useEffect hook, to get saved news items from local storage, using the same key ('savedNewsItems') ✅
 - Use an empty array as the dependency because this only needs to be done the first time the component mounts. ✅
-- Render a NewsItem components for each of the saved items.
-- Do this by importing the previously created ResultsArea component, passing down the 'savedNewsItems' array for the 'articles' prop
+- Render a NewsItem component for each of the saved items. ✅
+- Do this by importing the previously created ResultsArea component, passing down the 'savedNewsItems' array for the 'articles' prop ✅
