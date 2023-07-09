@@ -34,7 +34,7 @@
 - Keep article title to a fixed length e.g. 50 characters, replacing extra characters with '...' ✅
 - Make the card expand when clicking on 'view details', showing the description, full title, and news source link for the article ✅
 
-## Stage 4 - refactoring and testing
+## Stage 4 - refactoring and testing + extra features
 
 - Look at code suggestions (use ChatGPT and/or Codium AI) to assess performance, readability and security of code. ✅
 - Write tests for HomePage component. ✅
@@ -43,3 +43,5 @@
 - Include a function to check no duplicate news items are added ✅
 - Show a 'Snackbar' in the corner to indicate when a news item has been added, or if it already exists ✅
 - View saved articles on the ArticlePage
+- Create a MenuBar component that is used to direct the user to the HomePage and/or SavedArticles page ✅
+- Only show the SearchBar component when the user is on the home page (not when checking saved articles or visiting about page)✅

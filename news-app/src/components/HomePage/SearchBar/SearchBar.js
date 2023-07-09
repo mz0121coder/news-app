@@ -5,6 +5,7 @@ Clicking on the button renders news events based on the new search query
 // Import the required dependencies
 import './SearchBar.css';
 import { TextField, Button } from '@mui/material';
+import MenuBar from '../../MenuBar/MenuBar';
 
 // Define the SearchBar component
 export default function SearchBar(props) {
@@ -22,6 +23,7 @@ export default function SearchBar(props) {
 			<Button variant='contained' onClick={props.handleSearchClick}>
 				Submit
 			</Button>
+			<MenuBar />
 		</div>
 	);
 }
