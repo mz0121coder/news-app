@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef } from 'react';
 import { styled } from '@mui/material/styles';
 import {
 	Card,
@@ -13,6 +13,8 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 // Styled component for the expand button
 const ExpandMore = styled(IconButton)(({ theme, expand }) => ({
 	transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
@@ -21,7 +23,12 @@ const ExpandMore = styled(IconButton)(({ theme, expand }) => ({
 		duration: theme.transitions.duration.shortest,
 	}),
 }));
+const Alert = forwardRef(function Alert(props, ref) {
+	return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />;
+});
 export default function NewsItem(props) {
+	const [snackbarOpen, setSnackbarOpen] = useState(false);
+	const [duplicate, setDuplicate] = useState(false);
 	const [expanded, setExpanded] = useState(false);
 	// Function to handle the expand button click
 	const handleExpandClick = () => {
@@ -44,14 +51,32 @@ export default function NewsItem(props) {
 				// Add the news item to the array if it doesn't exist
 				savedNewsItems.push(newsItem);
 				localStorage.setItem('savedNewsItems', JSON.stringify(savedNewsItems));
+				setSnackbarOpen(true);
 				console.log(savedNewsItems);
 			} else {
+				setDuplicate(true);
 				console.log('News item already exists in savedNewsItems');
 			}
 		}
 	};
 	return (
 		<Card sx={{ maxWidth: 350 }}>
+			<Snackbar
+				open={snackbarOpen}
+				autoHideDuration={5000}
+				onClose={() => setSnackbarOpen(false)}>
+				<Alert severity='success' sx={{ width: '100%' }}>
+					News item added!
+				</Alert>
+			</Snackbar>
+			<Snackbar
+				open={duplicate}
+				autoHideDuration={5000}
+				onClose={() => setDuplicate(false)}>
+				<Alert severity='info' sx={{ width: '100%' }}>
+					News item already added!
+				</Alert>
+			</Snackbar>
 			<CardHeader
 				action={
 					<IconButton
