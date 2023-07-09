@@ -8,8 +8,8 @@ export default function ResultsArea(props) {
 	return (
 		<div className='result-area'>
 			{/* <h1>News</h1> */}
-			{props.articles.map(article => (
-				<div key={article.id} className='news-item-container'>
+			{props.articles.map((article, index) => (
+				<div key={index} className='news-item-container'>
 					<NewsItem
 						id='news-item'
 						title={article.title}

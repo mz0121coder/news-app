@@ -10,7 +10,7 @@ export default function SavedArticles() {
 			JSON.parse(localStorage.getItem('savedNewsItems')) || [];
 		setNewsItems(savedNewsItems);
 	}, [newsItems]);
-	console.log({ newsItems });
+
 	return (
 		<>
 			<div className='saved-heading-container'>
