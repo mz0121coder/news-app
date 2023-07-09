@@ -1,6 +1,6 @@
 /*
 import NewsItem template
-render a NewsItem component for each article from the most recent fetch data 
+render a NewsItem component for each article from the most recent data fetch
 */
 import NewsItem from '../../NewsItem/NewsItem';
 import './ResultsArea.css';

@@ -4,15 +4,15 @@
 
 - Create desktop and mobile wireframes (in progress)
 - Plan and create a starting component tree diagram with pages, components and props mapped out ✅
-- Create a js file and test file for main components, nest children inside of parent folders ✅
+- Create a js file and test file for main components, nest children inside their parent folders ✅
 - Set up folder structure (CRA) ✅
 - Install react router dom ✅
 - Set up Route to HomePage ✅
-- Set up Route to ArticlePage✅
+- Set up Route to ArticlePage ✅
 - install dotenv and create .env file ✅
 - create account for news API and add API key to .env file, use the key in the HomePage component ✅
 - auto deploy on Netlify ✅
-- netlify toml file to prevent refresh issues ✅
+- add a netlify.toml file to prevent refresh issues ✅
 - add env and set CI to false on netlify for smooth deployment ✅
 - install Material UI ✅
 
@@ -31,8 +31,13 @@
 - Show articles as grid with 2 on each row for tablets (600 to 900px) ✅
 - Show as 3 on each row for other devices ✅
 - Use Material UI card components to style the articles ✅
+- Keep article title to a fixed length e.g. 50 characters, replacing extra characters with '...' ✅
+- Make the card expand when clicking on 'view details', showing the description, full title, and news source link for the article ✅
 
 ## Stage 4 - refactoring and testing
 
 - Look at code suggestions (use ChatGPT and/or Codium AI) to assess performance, readability and security of code. ✅
-- Write a test suite for HomePage component. ✅
+- Write tests for HomePage component. ✅
+- Write tests for ResultsArea component. ✅
+- Save articles to an array, keep them in local storage ✅
+- View saved articles on the ArticlePage
