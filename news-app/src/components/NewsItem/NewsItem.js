@@ -36,9 +36,18 @@ export default function NewsItem(props) {
 			// Save the NewsItem to local storage
 			const savedNewsItems =
 				JSON.parse(localStorage.getItem('savedNewsItems')) || [];
-			savedNewsItems.push(newsItem);
-			localStorage.setItem('savedNewsItems', JSON.stringify(savedNewsItems));
-			console.log(savedNewsItems);
+			// Check if the news item already exists in the array
+			const isDuplicate = savedNewsItems.some(
+				item => item.title === newsItem.title
+			);
+			if (!isDuplicate) {
+				// Add the news item to the array if it doesn't exist
+				savedNewsItems.push(newsItem);
+				localStorage.setItem('savedNewsItems', JSON.stringify(savedNewsItems));
+				console.log(savedNewsItems);
+			} else {
+				console.log('News item already exists in savedNewsItems');
+			}
 		}
 	};
 	return (

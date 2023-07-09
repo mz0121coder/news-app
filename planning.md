@@ -40,4 +40,6 @@
 - Write tests for HomePage component. ✅
 - Write tests for ResultsArea component. ✅
 - Save articles to an array, keep them in local storage ✅
+- Include a function to check no duplicate news items are added ✅
+- Show a 'Snackbar' in the corner to indicate when a news item has been added, or if it already exists
 - View saved articles on the ArticlePage
