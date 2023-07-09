@@ -16,6 +16,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import BookmarkAdd from '@mui/icons-material/BookmarkAdd';
+import DeleteIcon from '@mui/icons-material/Delete';
 // Styled component for the expand button
 const ExpandMore = styled(IconButton)(({ theme, expand }) => ({
 	transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
@@ -60,6 +61,22 @@ export default function NewsItem(props) {
 			}
 		}
 	};
+	const handleDeleteClick = newsItem => {
+		const deleteConfirmation = window.confirm(
+			'Do you want to delete this news item from your saved articles?'
+		);
+		if (deleteConfirmation) {
+			const savedNewsItems =
+				JSON.parse(localStorage.getItem('savedNewsItems')) || [];
+			const index = savedNewsItems.findIndex(
+				item => item.title === newsItem.title
+			);
+			if (index !== -1) {
+				savedNewsItems.splice(index, 1);
+				localStorage.setItem('savedNewsItems', JSON.stringify(savedNewsItems));
+			}
+		}
+	};
 	return (
 		<Card sx={{ maxWidth: 350 }}>
 			<Snackbar
@@ -80,12 +97,19 @@ export default function NewsItem(props) {
 			</Snackbar>
 			<CardHeader
 				action={
-					<IconButton
-						aria-label='settings'
-						onClick={() => handleSaveClick(props)}>
-						{/* <MoreVertIcon /> */}
-						<BookmarkAdd />
-					</IconButton>
+					window.location.pathname === '/' ? (
+						<IconButton
+							aria-label='settings'
+							onClick={() => handleSaveClick(props)}>
+							<BookmarkAdd />
+						</IconButton>
+					) : (
+						<IconButton
+							aria-label='settings'
+							onClick={() => handleDeleteClick(props)}>
+							<DeleteIcon />
+						</IconButton>
+					)
 				}
 				title={
 					<Typography variant='h6' fontSize={16}>

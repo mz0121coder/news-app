@@ -9,7 +9,7 @@ export default function SavedArticles() {
 		const savedNewsItems =
 			JSON.parse(localStorage.getItem('savedNewsItems')) || [];
 		setNewsItems(savedNewsItems);
-	}, []);
+	}, [newsItems]);
 	console.log({ newsItems });
 	return (
 		<>

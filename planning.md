@@ -51,5 +51,7 @@
 
 - On SavedArticles page, use the useEffect hook, to get saved news items from local storage, using the same key ('savedNewsItems') ✅
 - Use an empty array as the dependency because this only needs to be done the first time the component mounts. ✅
+- REFACTORED => NOW USING savedNewsItems as dependency, after adding functionality to delete saved articles from the list ✅
 - Render a NewsItem component for each of the saved items. ✅
 - Do this by importing the previously created ResultsArea component, passing down the 'savedNewsItems' array for the 'articles' prop ✅
+- Make a function to delete a news article from local storage, asking the user if they want to do so, showing a 'Snackbar' message when item is deleted
