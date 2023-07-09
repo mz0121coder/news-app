@@ -12,9 +12,10 @@ import {
 	Link,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+// import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
+import BookmarkAdd from '@mui/icons-material/BookmarkAdd';
 // Styled component for the expand button
 const ExpandMore = styled(IconButton)(({ theme, expand }) => ({
 	transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
@@ -82,7 +83,8 @@ export default function NewsItem(props) {
 					<IconButton
 						aria-label='settings'
 						onClick={() => handleSaveClick(props)}>
-						<MoreVertIcon />
+						{/* <MoreVertIcon /> */}
+						<BookmarkAdd />
 					</IconButton>
 				}
 				title={
