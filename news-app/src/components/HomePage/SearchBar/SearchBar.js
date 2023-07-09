@@ -2,10 +2,12 @@
 SearchBar component returns an input where the user types, updating the search query
 Clicking on the button renders news events based on the new search query
 */
+// Import the required dependencies
 import './SearchBar.css';
 import { TextField, Button } from '@mui/material';
-
+// Define the SearchBar component
 export default function SearchBar(props) {
+	// Render the search bar
 	return (
 		<div className='search-bar'>
 			<TextField

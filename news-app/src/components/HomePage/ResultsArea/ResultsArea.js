@@ -1,10 +1,9 @@
 /*
-import NewsItem template
-render a NewsItem component for each article from the most recent data fetch
+  Import the NewsItem template
+  Render a NewsItem component for each article from the most recent data fetch
 */
 import NewsItem from '../../NewsItem/NewsItem';
 import './ResultsArea.css';
-
 export default function ResultsArea(props) {
 	return (
 		<div className='result-area'>

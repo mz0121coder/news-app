@@ -2,13 +2,13 @@ import SearchBar from './SearchBar/SearchBar';
 import ResultsArea from './ResultsArea/ResultsArea';
 import { useState } from 'react';
 const API_KEY = process.env.REACT_APP_API_KEY;
-
 export default function HomePage() {
+	// State variables
 	const [search, setSearch] = useState('');
 	const [articles, setArticles] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
-
+	// Function to handle search click
 	async function handleSearchClick() {
 		try {
 			setLoading(true);
@@ -27,14 +27,15 @@ export default function HomePage() {
 			setLoading(false);
 		}
 	}
-
 	return (
 		<>
+			{/* Search bar component */}
 			<SearchBar
 				search={search}
 				handleInputChange={event => setSearch(event.target.value)}
 				handleSearchClick={handleSearchClick}
 			/>
+			{/* Display loading, error, or results */}
 			{loading ? (
 				<p>Loading...</p>
 			) : error ? (
