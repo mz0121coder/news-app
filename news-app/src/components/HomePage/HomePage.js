@@ -29,6 +29,7 @@ export default function HomePage() {
 	}
 	return (
 		<>
+			<h1 style={{ textAlign: 'center' }}>News App</h1>
 			{/* Search bar component */}
 			<SearchBar
 				search={search}
