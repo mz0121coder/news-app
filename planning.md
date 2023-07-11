@@ -44,8 +44,7 @@
 - Show a 'Snackbar' in the corner to indicate when a news item has been added, or if it already exists ✅
 - View saved articles on the ArticlePage
 - Create a MenuBar component that is used to direct the user to the HomePage and/or SavedArticles page ✅
-- Only show the SearchBar component when the user is on the home page (not when checking saved articles or visiting about page)✅
-- Create a route to an About page ✅
+- Only show the SearchBar component when the user is on the home page (not when checking saved articles)✅
 
 ## Stage 5 - show saved articles + finishing touches
 

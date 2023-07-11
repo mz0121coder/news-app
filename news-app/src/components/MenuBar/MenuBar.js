@@ -9,7 +9,6 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-// import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { Link } from 'react-router-dom';
 export default function MenuBar() {
 	const [open, setOpen] = React.useState(false);
@@ -50,7 +49,6 @@ export default function MenuBar() {
 					aria-haspopup='true'
 					onClick={handleToggle}>
 					<MoreVertIcon className='menu-icon' />
-					{/* <MenuOutlinedIcon style={{ color: 'black' }} /> */}
 				</Button>
 				<Popper
 					open={open}
@@ -78,9 +76,6 @@ export default function MenuBar() {
 										</Link>
 										<Link className='page-link' to='/savedarticles'>
 											<MenuItem onClick={handleClose}>Saved Articles</MenuItem>
-										</Link>
-										<Link to='/about' className='page-link'>
-											<MenuItem onClick={handleClose}>About</MenuItem>
 										</Link>
 									</MenuList>
 								</ClickAwayListener>
