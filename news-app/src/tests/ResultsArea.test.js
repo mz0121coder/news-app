@@ -22,6 +22,15 @@ test('renders news items correctly', () => {
 			source: { name: 'Source 2' },
 			publishedAt: '2021-01-02',
 		},
+		{
+			id: 3,
+			title: 'Article 2',
+			image: 'image2.jpg',
+			description: 'Description 3',
+			url: 'https://example.com/article3',
+			source: { name: 'Source 3' },
+			publishedAt: '2021-01-03',
+		},
 	];
 	// Render ResultsArea component with the sample articles
 	render(<ResultsArea articles={articles} />);
