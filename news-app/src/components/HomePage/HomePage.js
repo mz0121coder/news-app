@@ -19,7 +19,13 @@ export default function HomePage() {
 			if (data.error) {
 				setError(data.error);
 			} else {
-				setArticles(data.articles);
+				const articles = [];
+				data.articles.slice(0, 50).forEach(article => {
+					if (!articles.some(el => el.title === article.title)) {
+						articles.push(article);
+					}
+				});
+				setArticles(articles);
 			}
 		} catch (error) {
 			setError(error.message);
