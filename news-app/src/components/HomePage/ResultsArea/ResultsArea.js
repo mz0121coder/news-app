@@ -22,7 +22,7 @@ export default function ResultsArea(props) {
 								? article.source.name
 								: article.source
 						}
-						// on the homepage, format date the first time it is read from each news item object. One saved articles page, it is already added as a 'date' key for each item, so no need to format it again.
+						// on the homepage, format date the first time it is read from each news item object. On saved articles page, it is already added as a 'date' key for each item, so no need to format it again.
 						date={
 							window.location.pathname === '/'
 								? new Date(article.publishedAt).toLocaleDateString('en-GB', {
