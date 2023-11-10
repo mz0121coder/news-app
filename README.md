@@ -6,7 +6,7 @@ A clean, simple and responsive React app to search, view, save and delete recent
 
 ## Demo
 
-![app-demo](./news-app-demo.gif)
+![app-demo](./news-app/src/assets/news-app-demo.gif)
 
 ## How to Use
 
