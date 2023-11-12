@@ -114,10 +114,10 @@ export default function NewsItem(props) {
 				title={
 					<Typography variant='h6' fontSize={16}>
 						{expanded
-							? props.title
-							: props.title.length > 60
-							? props.title.slice(0, 60) + '...'
-							: props.title}
+							? props?.title || ''
+							: props?.title?.length > 60
+							? props?.title?.slice(0, 60) + '...'
+							: props?.title || ''}
 					</Typography>
 				}
 				subheader={

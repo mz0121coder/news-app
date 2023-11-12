@@ -20,7 +20,7 @@ export default function HomePage() {
 				setError(data.error);
 			} else {
 				const articles = [];
-				data.articles.slice(0, 50).forEach(article => {
+				data?.articles?.forEach(article => {
 					if (!articles.some(el => el.title === article.title)) {
 						articles.push(article);
 					}
